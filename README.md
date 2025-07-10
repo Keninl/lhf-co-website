@@ -60,3 +60,9 @@ It demonstrates modern web design practices including:
 1. **Clone this repo:**
    ```bash
    git clone https://github.com/yourusername/lhf-co-website.git
+
+## 📑 Attributions
+- Hero Banner image from [Unsplash](https://unsplash.com)
+- Card Images from [Unsplash](https://unsplash.com)
+- Google Fonts: Dancing Script, Roboto
+- YouTube Video: Coffee Shop LoFi - Original creator link.
