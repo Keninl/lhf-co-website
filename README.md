@@ -65,4 +65,4 @@ It demonstrates modern web design practices including:
 - Hero Banner image from [Unsplash](https://unsplash.com)
 - Card Images from [Unsplash](https://unsplash.com)
 - Google Fonts: Dancing Script, Roboto
-- YouTube Video: Coffee Shop LoFi - Original creator link.
+- YouTube Video: Coffee Beats Youtube - Original creator link.
