@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LHF.co — Where Faith Meets Art</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+
+
+
+
+<body>
+  <!-- Header & Nav -->
+  <header>
+    <div class="logo">LHF.co</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Banner -->
+    <section class="hero fade-in">
+      <h1>Where Faith Meets Art</h1>
+      <p>With Each Sip of Coffee, Travel Deep into Your Soul</p>
+      <a href="#" class="cta-button">Exploration</a>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content fade-in">
+      <h2>Our Story</h2>
+      <p>Born From Faith and Creativity, LHF.co Sees Every Cup and every Conversation as a Soulful Connection</p>
+    </section>
+
+    <!-- Card Section -->
+    <section class="cards fade-in">
+      <div class="card">
+        <img src="images/special.jpg" alt="Specialty Coffee">
+        <h3>Specialty Coffee</h3>
+        <p>From Bean to Brew, Every Cup Reflects the Soul of Our Pour-Over Artisans</p>
+      </div>
+      <div class="card">
+        <img src="images/artexhibit.jpg" alt="Art Exhibit">
+        <h3>ART EXHIBITION</h3>
+        <p>We Regularly Invite Local Artists for Collaborative Exhibitions.</p>
+      </div>
+      <div class="card">
+        <img src="images/workshop.jpg" alt="Workshops">
+        <h3>Art & Faith Studio</h3>
+        <p>Coffee. Conversation. A meeting of art and soul.</p>
+      </div>
+    </section>
+
+<section class="faq fade-in">
+  <h2>FAQ</h2>
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-header">
+        What is LHF.co?<span class="symbol">+</span>
+      </button>
+      <div class="accordion-content">
+        <p>A sanctuary where faith, art, and coffee meet to inspire conversation and creativity</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header">Do you host art workshops?<span class="symbol">+</span></button>
+      <div class="accordion-content">
+        <p>Yes! We offer regular art sessions, poetry gatherings, and community talks</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header">How can I join an event?<span class="symbol">+</span></button>
+      <div class="accordion-content">
+        <p>Check our events page or visit us — sign-ups are open in-store and online</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Embedded Video -->
+    <section class="video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/H3WhrC_cHaw?si=_zD7ikuH1f5H-3M3" frameborder="0" allowfullscreen></iframe>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 LHF.co — WHERE FAITH MEET ART</p>
+    <div class="social">
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="mailto:contact@lhf.co">Email</a>
+    </div>
+  </footer>
+
+  <!-- Optional: Burger Menu Script -->
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('nav-active');
+    });
+  </script>
+
+  <script>
+  const accHeaders = document.querySelectorAll('.accordion-header');
+
+  accHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      header.classList.toggle('active');
+
+   if (content.style.maxHeight) {
+  content.style.maxHeight = null;
+  header.querySelector('.symbol').textContent = '+';
+} else {
+  content.style.maxHeight = content.scrollHeight + "px";
+  header.querySelector('.symbol').textContent = '+';
+}
+
+    });
+  });
+</script>
+
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        return;
+      } else {
+        entry.target.classList.add('appear');
+        appearOnScroll.unobserve(entry.target);
+      }
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
+
+</body>
+</html>
